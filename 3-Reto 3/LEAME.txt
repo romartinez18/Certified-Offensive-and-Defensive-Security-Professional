@@ -1,0 +1,6 @@
+--Reto Informático numero 3: se tiene la siguiente url
+http://52.90.59.125//steganography/
+
+--Pista: Tus conocimientos en esteganografía y password cracking te vendrían bien!!
+
+--Flag final: El flag final de este reto es des ocultar un archivo, y crackear un password

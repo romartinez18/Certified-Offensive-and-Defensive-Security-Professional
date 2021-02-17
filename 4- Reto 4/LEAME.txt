@@ -1,0 +1,12 @@
+﻿--Reto Informático numero 4: Se tienen los hashes 
+
+89337CF7FAFB6110A2C72E5AA711639E5F3F37E2    (SHA1)  ecuaestilolatino
+16BD2368D9E7789B28BEB978D394B4EED8DE8641    (SHA1)  Ecuaestilolatino
+F0F84313C7ADA13F4DDA289DDC683EEF41E83185    (SHA1)  ECUAESTILOLATINO
+E9045AE52E2CA70232C5678F506CA3ECE9C7BAA0    (SHA1)  onitalolitseauce
+54D5F411F4ADA02512E69B81CC68EF28F9D83940    (SHA1)  ecuaestilolatino99
+9D0C2FC4A62F8846433799533720C5C43B0A0414    (SHA1)  1ecuaestilolatino
+
+--Pista: Tus conocimientos en password cracking con reglas seria genial!!!
+
+--Flag final: El flag final de este reto son 6 password crackeados

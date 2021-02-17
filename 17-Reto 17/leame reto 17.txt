@@ -1,0 +1,58 @@
+﻿--Reto Informático numero 17: Se tiene un volcado de memoria RAM, el cual es resultante de una investigación forense digital, y hace parte de una prueba forense. Respecto a este dump (volcado de memoria) se debe de obtener lo siguiente:
+ (El volcado de memoria esta localizado en la carpeta reto 17 y se llama: memdump.mem)
+
+Se deben de extraer los hash de la SAM database que se encuentran en el volcado de memoria, y proceder a crackearlos (Solo crackear los hash de los usuarios oscorp , jean.claude y juanes)
+
+--Pista: Tus conocimientos en análisis forense de memoria RAM usando la herramienta volatility Framework, te vendría muy bien!!
+https://www.volatilityfoundation.org/26
+Además de los conocimientos en password cracking a hash en formato NTLM HASH usando ataques combinados, seria de utilidad!!
+Como ayuda extra se te suministra un diccionario
+
+--Flag final: El flag final de este reto es cracking de varias contraseñas 3 en total. Solo crackear los password de los usuarios extraídos de la sam database llamados: oscorp , jean.claude y juanes
+
+
+
+*** VOLATILITY  ***
+
+- Analizamos el perfil de la imagen: Win7SP1x86_23418, Win7SP0x86, Win7SP1x86
+(detectado Windows 7 SP0/1 x86)
+volatility imageinfo -f memdump.mem
+
+
+- Procesos que estaban activos el perfil de la imagen Win7SP1x86_23418
+(detectado Windows 7 SP0/1 x86)
+
+volatility --profile=Win7SP1x86_23418 -f memdump.mem pslist
+
+
+- Identificar la dirección donde están los datos del archivo SAM
+
+volatility --profile=Win7SP1x86_23418 -f memdump.mem hivelist
+
+MACHINE SYSTEM
+Virtual Address: 0x8901c008
+Physical Address: 0x27bee008
+
+SAM
+Virtual Address: 0x899379c8
+Physical Address: 0x2283a9c8
+
+- Volcar los datos del archivo SAM (con la direccion virtual del registro SYSTEM y el archivo SAM)
+
+volatility hashdump --profile=Win7SP1x86_23418 -f memdump.mem -y 0x8901c008 -s 0x899379c8 > hash_SAM.txt
+
+
+- Se copiaron los hash de los 3 usuarios (oscorp, jean.claude y juanes)
+
+- Se genero un nuevo diccionario realizando combinaciones con el archivo diccionario.txt dado y usando la herramienta princeprocessor
+
+pp64 --elem-cnt-min=1 --elem-cnt-min=8 diccionario.txt > newDiccionario.txt
+
+- Con el nuevo diccionario generado se procede a crackear los hashes indicado la opción NTLM en la herramienta hashcat
+
+hashcat -a 0 -m 1000 -w 3 -D 1 hash.txt newDiccionario.txt
+
+
+Las contraseñas obtenidas fueron van2021DAME, norman2021NORMAN y tierra2021TIERRA
+
+

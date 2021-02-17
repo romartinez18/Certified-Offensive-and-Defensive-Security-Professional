@@ -1,0 +1,7 @@
+--Reto Informático numero 7: Se tienen los siguientes 2 archivos:
+
+Tramared.cap  & dicc.txt
+
+--Pista: Tus conocimientos en análisis de tráfico de red y password cracking seria ideales
+
+--Flag final: El flag final es obtener un pasword crackeado

@@ -1,0 +1,5 @@
+--Reto Informático numero 10: Reventar (Crackear) los 7 hashes (Password) obtenidos en el reto número 9
+
+--Pista: Tus conocimientos en password cracking, te serian de mucha utilidad
+
+--Flag final: El flag final de este reto es lograr crackear los  7 hashes 

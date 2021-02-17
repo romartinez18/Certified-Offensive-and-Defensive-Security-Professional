@@ -1,0 +1,10 @@
+﻿--Reto Informático numero 18: Se tiene un archivo de texto llamado code-decode.txt
+Proceder a validar que tipo de información contiene, y luego decodificarla.
+
+--Pista: Usa la información que se decodifica , para usarla como contraseña, para descomprimir el archivo llamado felicidades.rar
+
+--Flag final: El flag final de este reto es obtener (Visualizar) el contenido del archivo felicidades.rar
+
+
+
+

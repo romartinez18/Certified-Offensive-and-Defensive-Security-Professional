@@ -1,0 +1,26 @@
+﻿--Reto Informático numero 12: Construir un diccionario con los personajes de la famosa serie de televisión mexicana el chavo del ocho. Una vez que se construye el diccionario en mención, crear una regla personalizado con los primeros 12 items de las reglas de la aplicación hashcat
+(Implemented compatible functions)
+https://hashcat.net/wiki/doku.php?id=rule_based_attack
+
+Luego debes de romper (Crackear) los siguientes hash:
+
+DEDB6F3A8CDBD055AB3710890EB1D974	  (MD5)
+2427f3d7e91d20e31a2ee49607bd189144559886  (SHA1 - SHA128)
+
+
+--Pista: Tus conocimientos en password cracking usando la técnica de ataques por reglas, te vendría muy bien!!. Usar una regla personalizada seria una gran idea!!
+
+--Flag final: El flag final de este reto es reventar (Crackear) varios password
+
+
+- Se creo un diccionario a partir de los nombres mencionados en https://es.wikipedia.org/wiki/El_Chavo_del_8
+
+
+
+- hashcat -m 0 -D 1 -w 3 DEDB6F3A8CDBD055AB3710890EB1D974 "C:\hk\CODSP\CTF-CODSP-V-6-2021\12-Reto 12\dic.txt" -r "C:\hk\CODSP\CTF-CODSP-V-6-2021\rules.txt" --debug-mode=1 --debug-file=foundWithRule.txt
+
+Se encontro la contraseña brujadel71brujadel71
+
+- hashcat -m 100 -D 1 -w 3 2427f3d7e91d20e31a2ee49607bd189144559886 "C:\hk\CODSP\CTF-CODSP-V-6-2021\12-Reto 12\dic.txt" -r "C:\hk\CODSP\CTF-CODSP-V-6-2021\rules.txt" --debug-mode=1 --debug-file=foundWithRule.txt
+
+Se encontro la contraseña ?????

@@ -1,0 +1,16 @@
+﻿--Reto Informático numero 9: Se tienen una copia (Backup) cifrada de un sistema firewall perimetral, debes de proceder a cargarla al respectivo firewall
+
+--Pista: Tus conocimientos en firewall perimetrales como PFSENSE, serian ideales!!
+
+--Flag final: El flag final de este reto es lograr obtener 7 hashes que están en las descripciones de las reglas LAN de la copia de seguridad que se debe de restaurar en un firewall pfsense nuevo (Instalado desde cero). La contraseña obtenida en el reto 8 te será de mucha utilidad para resolver este reto 9.
+
+
+
+
+- Primero se elimino la primera y última linea del archivo encriptado
+---- BEGIN config.xml ----
+---- END config.xml ----
+
+- Luego desde la consola podemos desencriptar el archivo con openssl (primero desencriptara el base64 y luego el aes-256-cbc) y colocamos la contraseña MAZINGERLISTO2020 obtenida del reto anterior:
+
+openssl enc -aes-256-cbc -base64 -d -p -in config-firewallcodsp-CIFRADO.xml -out config-dec.xml

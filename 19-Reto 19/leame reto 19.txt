@@ -1,0 +1,12 @@
+﻿--Reto Informático numero 19: Se tiene un archivo llamado data. Lo que debes de hacer es identificar el tipo de archivo es, y además extraer datos (Análisis básico de binarios y de metadatos) de este archivo
+
+--Pista: De este archivo puedes extraer información relacionada con el password de un usuario llamado guest. Además tus conocimientos en extracción de metadatos y análisis básico de archivos ejecutables (Análisis básico de binarios) e ingeniería reversa básica te serian de mucha ayuda.
+
+--Flag final: El flag final de este reto es obtener el password de un usuario llamado guest y luego descomprimir el archivo llamado decepticos.rar y observa el respectivo contenido del archivo comprimido en mención. Para obtener el password del archivo a descomprimir, debes de concatenar los valores del usuario y password encontrados en el archivo data (Análisis básico de binarios), en lo que respecta al análisis del archivo binario, y no de la información extraída de los metadatos.
+
+guest7R1n17yN30
+
+
+- MZ (tipo binario .exe, Al ejecutar el archivo muestra una pantalla que dice "Welcome In Matrix v3 by ./unknowndevice64", al parecer compilada con el lenguaje .NET)
+
+- Al analizar el ejecutable no se pudo observar alguna información. Se utilizo la herramienta Streams de la suite sysinternal y se logro obtener la información Zone.Identifier

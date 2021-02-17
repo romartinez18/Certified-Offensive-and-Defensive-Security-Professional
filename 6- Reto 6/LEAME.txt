@@ -1,0 +1,13 @@
+﻿--Reto Informático numero 6: Se tienen los siguientes hashes, hay que tratar de romperlos
+
+61DA2C8562576685719DC8FA1DCA0E62  (md5)
+51BD4343528792C4BADF734D2119391B  (md5)
+2E3C180811AD56EAFA8FD69A6D8E30F9  (md5)
+CB6E05C7FCF884621951883C77005BD1  (md5)
+64D791D55E366146C39367631B5AF31B  (md5, NTLM)
+343BFABA861604E67E4B70D0D36BD0F7  (md5)
+
+--Pista: Tus conocimientos en password cracking y técnicas de rainbow tables te serian de mucha ayuda
+
+--Flag final: El flag final es obtener y-o  reventar 6 hash
+

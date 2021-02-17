@@ -1,0 +1,75 @@
+﻿--Reto Informático numero 13: Se tiene un volcado de memoria RAM, el cual es resultante de una investigación forense digital, y hace parte de una prueba forense. Respecto a este dump (volcado de memoria) se debe de obtener lo siguiente:
+
+A tener en cuenta:  (El volcado de memoria esta localizado en la carpeta reto 13 y se llama: memserver.mem)
+
+IP Agresor Informático:
+Nombre Malware (Ejecutado) por el agresor: 
+Puerto Origen conexión Malware: 
+Puerto Destino por donde entro el malware a la victima:
+PID del malware:
+Firma del malware antivirus MICROSOFT (Virus total) : 
+Hash del Malware MD5: 
+Hash del Malware SHA1:  
+IP donde se conectan a la victima pro el RDP: 
+Ruta donde se infecto el malware en el equipo victima: 
+
+--Pista: Tus conocimientos en análisis forense de memoria RAM usando la herramienta volatility Framework, te vendría muy bien!!
+https://www.volatilityfoundation.org/26
+
+--Flag final: El flag final de este reto es obtener la información solicitada en el enunciado del reto: 
+
+
+
+IP Agresor Informático: 201.233.17.174
+Nombre Malware (Ejecutado) por el agresor:   kjkabuto.exe
+Puerto Origen conexión Malware: 4815
+Puerto Destino por donde entro el malware a la victima: 3389
+PID del malware:  2728
+Firma del malware antivirus MICROSOFT (Virus total): Trojan:Win64/Meterpreter.B
+Hash del Malware MD5: 590eb099ec4833d72da64b9573f527ce
+Hash del Malware SHA1:  8927b1ab1762ee387fb51d7a21a75b7c6423ed0a
+IP donde se conectan a la victima por el RDP: 172.31.55.117
+Ruta donde se infecto el malware en el equipo victima: C:\Users\Administrator\Downloads\kjkabuto.exe
+
+
+
+
+
+
+
+
+
+volatility imageinfo -f "C:\hk\CODSP\CTF-CODSP-V-6-2021\13-reto 13\memserver.mem"
+
+Win10x64_14393, Win10x64_10586, Win10x64, Win2016x64_14393
+
+
+volatility --profile=Win10x64_14393 -f "C:\hk\CODSP\CTF-CODSP-V-6-2021\13-reto 13\memserver.mem" pslist
+
+sospechoso: 
+
+kjkabuto.exe  PID 2728
+sihost.exe  PID 2332
+
+
+
+volatility --profile=Win10x64_14393 -f "C:\hk\CODSP\CTF-CODSP-V-6-2021\13-reto 13\memserver.mem" yarascan --pid=2728 -Y "RDP"
+
+
+
+volatility --profile=Win10x64_14393 -f "C:\hk\CODSP\CTF-CODSP-V-6-2021\13-reto 13\memserver.mem" cmdline
+
+- se observa la ruta del ejecutable donde se ejecuto C:\Users\Administrator\Downloads\kjkabuto.exe
+
+
+volatility --profile=Win10x64_14393 -f "C:\hk\CODSP\CTF-CODSP-V-6-2021\13-reto 13\memserver.mem" netscan | findstr "ESTABLISHED" | findstr /V "127.0.0.1:"
+
+RDP 3389
+
+172.31.55.117:3389    201.233.17.174:4815
+
+
+volatility --profile=Win10x64_14393 -f "C:\hk\CODSP\CTF-CODSP-V-6-2021\13-reto 13\memserver.mem" procdump -p 2728 --dump-dir .
+
+Dumpeamos el ejecutable executable.2728.exe
+

@@ -1,0 +1,5 @@
+--Reto Informático numero 5: Se tiene el siguiente archivo reto5.cap, debes de extraer los usuarios y password de protocolos de red que no requieren autenticación.
+
+--Pista: Tus conocimientos en análisis de tráfico de red y protocolos que no aplican cifrado te vendrían de mucha utilidad
+
+--Flag final: El flag final es obtener un usuario y un password

@@ -1,0 +1,36 @@
+﻿--Reto Informático numero 15: Se tienen los siguientes hash. Proceder a romperlos
+
+hash1
+f99452d280d7310e26ba2362cfc62ae2f090a7b1
+Nota: el anterior hash contiene minúsculas y números
+Tipo: SHA1
+Respuesta: dajuan90
+comando: hashcat -m 100 -w 3 -a 3 -D 2 --increment --increment-min 4 --increment-max 10 --custom-charset1 '?l?d' hash.txt ?1?1?1?1?1?1?1?1?1?1
+
+hash2
+810F91EBBD575F21C07C60B1866D6BE309503388366DECD165D74A712AA0B25D
+Tipo: SHA-256
+Respuesta: mar8ia
+comando: hashcat -m 1400 -w 3 -a 3 -D 2 --increment --increment-min 4 --increment-max 14 hash.txt
+
+
+hash 3
+5DF5D06DDC1913B052C124B5796E5741
+Nota:Se tiene el precedente de que la contraseña es LA PALABRA megatron seguida de 3 caracteres , pero se  desconocen los últimos 3 caracteres de la contraseña completa megatron???
+Tipo: MD5
+Respuesta: megatron8M+   
+comando: hashcat -m 0 -a 3 -D 2 5DF5D06DDC1913B052C124B5796E5741 megatron?a?a?a
+
+
+hash 4
+2faab50573cc59de5ccb7d72be270eb0 
+Nota:: el password se compone de dos mayúsculas, dos minúsculas, dos números y dos caracteres especiales
+Tipo: MD5
+Respuesta: OPti44*-   
+comando: hashcat -m 0 -a 3 -D 2 2faab50573cc59de5ccb7d72be270eb0 ?u?u?l?l?d?d?s?s
+
+
+
+--Pistas: Tus conocimientos en password cracking utilizando la técnica de fuerza bruta y mascaras te serian de mucha utilidad para resolver este reto informático.
+
+--Flag final: El flag final de este reto es reventar (Crackear) varios password

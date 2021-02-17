@@ -1,0 +1,11 @@
+﻿--Reto Informático numero 16: Se tiene el siguiente hash:
+dba_juan:01003aca1ce588ca08bb1de64bd69fde4d2d7332723a058aca0e
+Se debe de identificar el tipo de hash, y una vez identificado el tipo de hash, proceder a romperlo (Crackearlo)
+
+--Pista: Tus conocimientos en password cracking e identificación de tipos de Hash te serian de mucha utilidad para resolver este reo
+
+--Flag final: El flag final de este reto es reventar (Crackear) una contraseña
+
+
+
+- Probablemente de Oracle database

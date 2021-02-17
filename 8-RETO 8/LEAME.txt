@@ -1,0 +1,5 @@
+--Reto Informático numero 8: Se tienen dos archivos: un archivo cifrado, y una llave criptográfica. 
+
+--Pista: Tus conocimientos en criptografía te vendrían muy bien!!. Usa el password crackeado en el reto anterior como ayuda para descifrar el archivo.
+
+--Flag final: El flag final de este reto es lograr descifrar un archivo y lograr ver su contenido

@@ -1,0 +1,8 @@
+Reto Informático numero 2: se tiene el siguiente servidor WEB Y URL
+http://52.90.59.125/
+
+Pista: Este sería un buen lugar para obtener la bandera numero 2
+
+--Flag final: El flag final de este reto es obtener y romper un hash
+
+

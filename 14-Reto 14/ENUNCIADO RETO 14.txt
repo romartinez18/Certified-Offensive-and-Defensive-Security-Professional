@@ -1,0 +1,5 @@
+--Reto Informático numero 14: Se tiene como consecuencia de un ataque a un servidor Windows 2016 server la siguiente SAM database. Proceder a crackear los password cifrados que se encuentran en los archivos en mención
+
+--Pista: Tus conocimientos en password cracking a tipos de Hash NTLM HASH te serian de gran ayuda!!.  Además, se te suministran dos diccionarios para ayudarte a reventar los password. 
+
+--Flag final: El flag final de este reto es reventar (Crackear) varios password

@@ -1,0 +1,8 @@
+﻿--Reto Informático numero 11: Reventar los siguientes hash:
+AB3DDA54E04A3FAC61F51ACD1E21233EBF28A73C3DC3C47A2B19DF0733621578      (SHA-256)
+1B87E42914B4E7682588A91E6FD1020F8B905E7D				(SHA-1)
+10F560DA63EF7D0DD0748AB410ED8B0ACE9F425E				(SHA-1)
+
+--Pista: Tus conocimientos en password cracking usando la técnica de ataques por reglas, te vendría muy bien!!
+
+--Flag final: El flag final de este reto es reventar (Crackear) un password

@@ -1,0 +1,7 @@
+﻿--Reto Informático numero 20: Se tiene este hash
+61125D499BF34357626AB61E4731AE671CEEA39455FF9937ECE4C8B70ACDF502     (SHA2-256)
+
+--Pista: Utilizar los metadatos obtenidos del análisis del archivo llamado data del reto 19 como diccionario para crackear este hash. Importante  no usar el mismo password que lograste obtener en el análisis binario del archivo data del reto 19.
+
+--Flag final: El flag final de este reto es obtener reventar (cracking) el hash suministrado
+

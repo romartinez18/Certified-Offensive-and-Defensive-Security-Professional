@@ -1,0 +1,9 @@
+--Reto Informático numero 1:
+
+--Enunciado: Se tiene el siguiente servidor web.  Este sería un buen lugar para obtener la bandera numero 1:
+Ip server web
+http://52.90.59.125/
+
+Pistas: Deberías de encontrar una url oculta
+
+--Flag final: El flag final de este reto es obtener y romper (Cracking) de un hash
